@@ -87,7 +87,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
-          headerShown: false,
+          headerShown: false, 
           tabBarShowLabel: false,
           tabBarStyle: {
             backgroundColor: "transparent",
