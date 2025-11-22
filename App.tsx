@@ -1,25 +1,50 @@
-// App.tsx
-import 'react-native-gesture-handler';
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './navigation/HomeScreen';
-import AboutScreen from './navigation/AboutScreen';
+import { NavigationContainer } from "@react-navigation/native";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import "./globals.css";
-export type RootStackParamList = {
-  Home: undefined;
-  About: undefined;
-};
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+import HomeScreen from "./navigation/HomeScreen";
+import Profile from "./navigation/Profile";
+import Notifications from "./navigation/Notifications";
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="About" component={AboutScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator initialRouteName="Profile">
+        <Tab.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            tabBarIcon: ({ color }) => (
+              <Ionicons name="home" size={20} color={color} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Profile"
+          component={Profile}
+          options={{
+            tabBarLabel: "Profile",
+            tabBarIcon: ({ color }) => (
+              <Ionicons name="person" size={20} color={color} />
+            ), 
+          }}
+        />
+        <Tab.Screen
+          name="Notifications"
+          component={Notifications}
+          options={{
+            tabBarLabel: "Notifications",
+            tabBarIcon: ({ color }) => (
+              <Ionicons name="person" size={20} color={color} />
+            ), 
+            tabBarBadge: 3
+            ,
+          }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
