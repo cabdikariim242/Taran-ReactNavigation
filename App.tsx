@@ -39,7 +39,8 @@ const TabIcon = ({ icon, focused, title }: TabIconProps) => {
           </ImageBackground>
           <Text
             style={{
-              fontSize: 11,
+               width: 71,  
+              fontSize: 13,
               fontWeight: "600",
               color: "#0C4C7B",
               textAlign: "center",
@@ -64,7 +65,8 @@ const TabIcon = ({ icon, focused, title }: TabIconProps) => {
             />
             <Text
               style={{
-                fontSize: 8,
+                fontSize: 11,
+                 width: 51, 
                 fontWeight: "600",
                 color: "rgba(12,76,123,0.7)",
                 textAlign: "center",
