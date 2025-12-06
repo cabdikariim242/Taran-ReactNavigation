@@ -2,7 +2,11 @@
 module.exports = {
   content: [
     "./App.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./landingPage/**/*.{js,jsx,ts,tsx}",
     "./navigation/**/*.{js,jsx,ts,tsx}",
+    "./Login/**/*.{js,jsx,ts,tsx}",
+    "./SignUp/**/*.{js,jsx,ts,tsx}", // Add if you have SignUp folder
   ],
   presets: [require("nativewind/preset")],
   theme: {

@@ -1,10 +1,10 @@
 import { images } from "@/assets/images";
 import React from "react";
 import { Image, ScrollView, Text, View, Pressable, ImageSourcePropType } from "react-native";
-
+ 
 export default function transaction() {
-  return (
-    <View className="flex-1  justify-start w-full px-6 pt-14 pb-8 relative items-center bg-[#ffffff84]">
+  return ( 
+    <View className="flex-1  justify-start w-full px-6 pt-4 pb-8 relative items-center bg-[#ffffff84]">
       {/* the top bar icon and text */}
       <View className="flex-row justify-between border-b border-[#0C4C7B1A] pb-4 items-center w-full mx-auto ">
         {/* IMG AND TEXT */}
@@ -25,7 +25,7 @@ export default function transaction() {
         />
       </View>
       {/* Cards */}
-   <View className="h-[535px] mt-4">
+   <View className="h-[560px] mt-4">
   <ScrollView showsVerticalScrollIndicator={false} >
     <View className="gap-4">
       <Cards status="confirming" icon={images.EVC} />
@@ -41,7 +41,7 @@ export default function transaction() {
   </ScrollView>
 </View>
 
-    </View>
+    </View> 
   );
 }
 

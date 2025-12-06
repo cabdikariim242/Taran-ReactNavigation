@@ -9,8 +9,8 @@ import {
 } from "react-native";
 
 export default function accounts() {
-  return (
-    <View className="flex-1 justify-start pt-10 px-6 items-center bg-[#ffffff84] h-[40px] ">
+  return ( 
+    <View className="flex-1 justify-start pt-4 px-6 items-center bg-[#ffffff84] h-[40px] ">
       <ScrollView className="w-full h-[560px]">
       {/* my accounts and add acount button */}
       <View className="flex-row justify-between border-b border-[#0C4C7B1A] pb-4 items-center w-full mx-auto ">
@@ -19,15 +19,15 @@ export default function accounts() {
         <Image source={images.suppport} className="w-[45px] h-[45px] " />
       </View>
       {/* bot and contact us  */}
-      <View className="flex flex-col justify-start gap-2 items-start w-full">
+      <View className="flex flex-col justify-start gap-2  items-start w-full">
         <Image
           source={images.CallCenter}
           className="w-[206px] h-[211px] mt-0 mx-auto"
         />
-        <Text className="font-bold text-[25px] text-[#0C4C7B] text-start w-[190px]">
+        <Text className="font-bold text-[25px] text-[#0C4C7B] text-start   ">
           Contact us
         </Text>
-        <Text className="font-[500] text-[17px] text-[#0C4C7B] text-start w-[321px] mx-auto">
+        <Text className="font-[500] text-[17px] text-[#0C4C7B] text-start w-[321px]    ">
           If you need any help please contact us our WhatsApp number by clicking
           the bellow button or our call center, Thanks .
         </Text>
@@ -65,7 +65,8 @@ export default function accounts() {
           />
         </View>
       </ScrollView>
-    </View>
+    </View> 
+    
   );
 }
 

@@ -10,12 +10,15 @@ import {
   Text,
   View,
 } from "react-native";
+
 export default function Index() {
   const [ShowDetails, setShowDetails] = useState(false);
   const [ShowAdv, setShowAdv] = useState(false);
-  return (
+  return ( 
+
+    
     //  full content
-    <View className="flex-1 relative pt-14 justify-start items-center  bg-white  ">
+    <View className="flex-1 relative  justify-start items-center  bg-white  ">
       {/* IMG AND TEXT */}
       <View className="flex flex-row gap-4 mt-4 justify-center items-center w-full max-w-[199px] ">
         <Image source={images.Award} className="w-[46px] h-[60px]" />
@@ -101,7 +104,7 @@ export default function Index() {
             <Advertisement show={ShowAdv} setShow={setShowAdv} />
           </View>
         </Modal> 
-    </View>
+    </View> 
   );
 }
 
