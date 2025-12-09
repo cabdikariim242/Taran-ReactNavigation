@@ -2,20 +2,9 @@ import { images } from "@/assets/images";
 import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { StackNavigationProp } from "@react-navigation/stack";
-
-// Define navigation types
-type RootStackParamList = {
-  LandingPage: undefined;
-  SignIn: undefined;
-  SignUp: undefined;
-  MainTabs: undefined;
-};
-
-type LandingPageNavigationProp = StackNavigationProp<RootStackParamList, 'LandingPage'>;
 
 const LandingPage = () => {
-  const navigation = useNavigation<LandingPageNavigationProp>();
+  const navigation = useNavigation<any>();
 
   return (
     <View className="w-full h-full bg-[#0C4C7B]">
@@ -31,18 +20,18 @@ const LandingPage = () => {
         <Image source={images.Anaasir} className="w-[431px] h-[455px] " />
         <View className="flex flex-row gap-7 ">
           <Pressable
-            onPress={() => navigation.navigate("SignIn")}
+            onPress={() => navigation.navigate("Signin")} // Goes to Signin screen
             className="bg-[#22C55E] rounded-[8px] w-[133px] h-[44px] flex justify-center items-center flex-row gap-3 mb-24"
           >
             <Image source={images.add} className="w-[17px] h-[17px] "/>
             <Text className="text-white ">Sign In</Text>
           </Pressable>
           <Pressable
-            onPress={() => navigation.navigate("MainTabs")} // Navigate to MainTabs
+            onPress={() => navigation.navigate("Login")} // Goes to Login screen
             className="border border-[#34C759] rounded-[8px] w-[133px] h-[44px] flex justify-center items-center flex-row gap-3 mb-24"
           >
             <Image source={images.signup} className="w-[17px] h-[17px] " />
-            <Text className="text-white ">Main Navigation</Text>
+            <Text className="text-white ">Log In</Text>
           </Pressable>
         </View>
       </View>

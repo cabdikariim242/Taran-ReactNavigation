@@ -1,18 +1,21 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { View, Text, Image, ImageBackground } from "react-native";
+import React from "react";
+import { Image, ImageBackground, Text, View } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { images } from "./assets/images";
+import CustomHeader from "./components/CustomHeader"; // 👈 NEW
+import SwapPopUp from "./components/SwapPopUp";
+import "./globals.css";
 import LandingPage from "./landingPage/LandingPage";
+import Login from "./Login/login";
+import Signin from "./Login/Signin";
 import Home from "./navigation/Home";
+import KYC from "./navigation/KYC";
+import Support from "./navigation/Support";
 import Swap from "./navigation/Swap";
 import Transaction from "./navigation/Transaction";
-import Support from "./navigation/Support";
-import KYC from "./navigation/KYC";
-import { images } from "./assets/images";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import CustomHeader from './components/CustomHeader' // 👈 NEW
-import './globals.css'
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -167,9 +170,10 @@ export default function App() {
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          
           <Stack.Screen name="LandingPage" component={LandingPage} />
-
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Signin" component={Signin} />
+          <Stack.Screen name="SwapPopUp" component={SwapPopUp} />
           {/* 👇 Tabs screen WITH custom header */}
           <Stack.Screen
             name="MainTabs"
@@ -178,7 +182,7 @@ export default function App() {
               headerShown: true,
               header: () => <CustomHeader />,
             }}
-          />
+          /> 
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

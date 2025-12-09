@@ -1,6 +1,7 @@
 import { images } from "@/assets/images"; 
-import { router } from "expo-router";
-import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+
+ import { useState } from "react";
 import {
   Image,
   ImageSourcePropType,
@@ -9,11 +10,13 @@ import {
   ScrollView,
   Text,
   View,
-} from "react-native";
+} from "react-native"; 
+ 
 
 export default function Index() {
   const [ShowDetails, setShowDetails] = useState(false);
   const [ShowAdv, setShowAdv] = useState(false);
+
   return ( 
 
     
@@ -111,6 +114,7 @@ export default function Index() {
 interface CardProps {
   title: string;
 }
+  const navigation = useNavigation<any>();
 const Cards = ({ title }: CardProps) => {
   return (
     <View className="flex flex-row justify-between items-center w-[356px] px-10 h-[129px] bg-[#0C4C7B1A]  rounded-[20px] ">
@@ -208,7 +212,7 @@ interface SCardProps {
 const SCards = ({ Icon, service, user }: SCardProps) => {
   return (
     <Pressable 
-      onPress={() => router.push('./index1')}
+      onPress={() => navigation.navigate("SwapPopUp")}
     >
     <View className="bg-white w-[355px] border border-[#0C4C7B0D]  h-[80px] mx-auto rounded-[12px] flex-row justify-start items-center ">
       <View className=" flex-row gap-2  justify-center items-center">

@@ -8,7 +8,7 @@ import {
   Text,
   View,
 } from "react-native";
-export default function accounts() {
+export default function Home() {
   return (
        <View className="flex-1  pt-4 px-5 justify-start items-center bg-[#ffffff84]">
         {/* my accounts and add acount button */}
