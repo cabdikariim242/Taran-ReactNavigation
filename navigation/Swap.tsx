@@ -1,4 +1,4 @@
-import { images } from "@/assets/images"; 
+import { images } from "@/assets/images";
 import { useNavigation } from "@react-navigation/native";
 
  import { useState } from "react";
@@ -10,12 +10,13 @@ import {
   ScrollView,
   Text,
   View,
-} from "react-native"; 
- 
+} from "react-native";
+
 
 export default function Index() {
   const [ShowDetails, setShowDetails] = useState(false);
   const [ShowAdv, setShowAdv] = useState(false);
+  const navigation = useNavigation<any>();
 
   return ( 
 
@@ -114,7 +115,7 @@ export default function Index() {
 interface CardProps {
   title: string;
 }
-  const navigation = useNavigation<any>();
+
 const Cards = ({ title }: CardProps) => {
   return (
     <View className="flex flex-row justify-between items-center w-[356px] px-10 h-[129px] bg-[#0C4C7B1A]  rounded-[20px] ">
@@ -169,34 +170,39 @@ const Popup = ({ show, setShow }: PopupProps) => {
       <View className="w-full mt-4 pb-20">
         <ScrollView showsVerticalScrollIndicator={false} className="w-full">
           <View className="flex flex-col gap-2">
-            <SCards Icon={images.Bybit} service="USDT" user="Tron (TRC20)" />
+            <SCards navigation={navigation} Icon={images.Bybit} service="USDT" user="Tron (TRC20)" />
             <SCards
+              navigation={navigation}
               Icon={images.TrustWallet}
               service="USDT "
               user="BNB Smart Chain (BEP20) "
             />
             <SCards
+              navigation={navigation}
               Icon={images.YiksiWallet}
               service="USDC"
               user="BNB Smart Chain (BEP20) "
             />
             <SCards
+              navigation={navigation}
               Icon={images.stableCoin}
               service="USDC"
               user="BNB Smart Chain (BEP20)"
             />
             <SCards
+              navigation={navigation}
               Icon={images.Bybit}
               service="Bybit Wallet Address"
               user="USDT BEP-20"
             />
 
             <SCards
+              navigation={navigation}
               Icon={images.TrustWallet}
               service="Trust Wallet Address "
               user="USDT TRC-20"
             />
-            <SCards Icon={images.BNB} service="BNB Gas Fee" user="BNB" />
+            <SCards navigation={navigation} Icon={images.BNB} service="BNB Gas Fee" user="BNB" />
           </View>
         </ScrollView>
       </View>
@@ -205,11 +211,12 @@ const Popup = ({ show, setShow }: PopupProps) => {
 };
 
 interface SCardProps {
+  navigation: any;
   Icon: ImageSourcePropType;
   service: string;
   user: string;
 }
-const SCards = ({ Icon, service, user }: SCardProps) => {
+const SCards = ({ navigation, Icon, service, user }: SCardProps) => {
   return (
     <Pressable 
       onPress={() => navigation.navigate("SwapPopUp")}
