@@ -1,7 +1,6 @@
 import { images } from "@/assets/images";
 import { Picker } from "@react-native-picker/picker";
-import React, { useState } from "react";
-// import { router } from "expo-router";
+import React, { useState } from "react"; 
 import { Image, Modal, Pressable, ScrollView, Text, View } from "react-native";
 
 export default function Index2() {
@@ -145,14 +144,7 @@ const Advertisement = ({ show, setShow }: ADVProps) => {
         You don’t have  USDT TRC-20 in your Account list. Please create  one to get started 
       </Text>
 
-    {/*  <Pressable
-      onPress={() => router.push('../index2')}
-        className="w-[276px] mx-auto h-[48px] bg-[#0C4C7B] rounded-[12px] flex justify-center items-center mt-5"
-      >
-         <Text className="text-white font-[600] text-[15px]">
-          Create Account
-        </Text>
-      </Pressable> */}
+     
     </View>
   );
 };
