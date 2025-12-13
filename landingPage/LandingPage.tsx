@@ -1,7 +1,7 @@
-import { images } from "@/assets/images";
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { images } from "../assets/images";
 
 const LandingPage = () => {
   const navigation = useNavigation<any>();
@@ -11,7 +11,7 @@ const LandingPage = () => {
       <View className="flex flex-row justify-center items-center gap-24 mt-16">
         <Image source={images.taranWhiteLogo} className="w-[127px] h-[127px]" />
         <Image
-          source={images.translate} 
+          source={images.translate}
           className="w-[37px] h-[37px] mt-[-60px] mr-[-100px]"
         />
       </View>
@@ -23,7 +23,7 @@ const LandingPage = () => {
             onPress={() => navigation.navigate("Signin")} // Goes to Signin screen
             className="bg-[#22C55E] rounded-[8px] w-[133px] h-[44px] flex justify-center items-center flex-row gap-3 mb-24"
           >
-            <Image source={images.add} className="w-[17px] h-[17px] "/>
+            <Image source={images.add} className="w-[17px] h-[17px] " />
             <Text className="text-white ">Sign In</Text>
           </Pressable>
           <Pressable

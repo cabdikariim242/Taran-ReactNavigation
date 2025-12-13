@@ -1,4 +1,3 @@
-import { images } from "@/assets/images";
 import React from "react";
 import {
   Image,
@@ -8,70 +7,66 @@ import {
   Text,
   View,
 } from "react-native";
+import { images } from "../assets/images";
 export default function accounts() {
   return (
- 
-      <View className="flex-1 justify-start pt-4 px-6 items-center bg-[#ffffff84] ">
-        {/* my accounts and add acount button */}
-        <View className="flex-row justify-between  border-b border-[#0C4C7B1A] pb-4 items-center w-full mx-auto ">
-          <Text className="font-bold text-[#0C4C7B] text-[18px] "> KYC</Text>
-          <Pressable className="flex-row gap-2">
-            <Image source={images.AddButton} className="w-[15px] h-[15px] " />
-            <View>
-              <Text className="font-bold text-[#0C4C7B] text-[12px] ">
-                Tier 4
-              </Text>
-              <Text className="font-[500] text-[#22C55E] text-[9px] ">
-                Upgrade Now!
-              </Text>
-            </View>
-          </Pressable>
-        </View>
-        {/* Cards */}
-        <View className="w-full  ">
-          <ScrollView
-            showsVerticalScrollIndicator={false}
-            className="w-full mt-4 flex  h-[600px]"
-          >
-            <Cards
-              Icon={images.Goverment}
-              service="Basic Information"
-              ver={true}
-            />
-            <Cards
-              Icon={images.Goverment}
-              service="Government ID "
-              ver={true}
-            />
-            <Cards Icon={images.Face} service="Government ID " ver={true} />
-            <Cards
-              Icon={images.Resident}
-              service="Residential Address"
-              ver={true}
-            />
-            <Cards
-              Icon={images.Certification}
-              service="Business Certificate"
-              ver={false}
-            />
-            <Cards
-              Icon={images.Certification}
-              service="Business Certificate"
-              ver={true}
-            />
-            <Cards
-              Icon={images.Certification}
-              service="Business Certificate"
-              ver={false}
-            />
-            <Cards
-              Icon={images.Certification}
-              service="Business Certificate"
-              ver={true}
-            />
-          </ScrollView>
-        </View>
-      </View> 
+    <View className="flex-1 justify-start pt-4 px-6 items-center bg-[#ffffff84] ">
+      {/* my accounts and add acount button */}
+      <View className="flex-row justify-between  border-b border-[#0C4C7B1A] pb-4 items-center w-full mx-auto ">
+        <Text className="font-bold text-[#0C4C7B] text-[18px] "> KYC</Text>
+        <Pressable className="flex-row gap-2">
+          <Image source={images.AddButton} className="w-[15px] h-[15px] " />
+          <View>
+            <Text className="font-bold text-[#0C4C7B] text-[12px] ">
+              Tier 4
+            </Text>
+            <Text className="font-[500] text-[#22C55E] text-[9px] ">
+              Upgrade Now!
+            </Text>
+          </View>
+        </Pressable>
+      </View>
+      {/* Cards */}
+      <View className="w-full  ">
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          className="w-full mt-4 flex  h-[600px]"
+        >
+          <Cards
+            Icon={images.Goverment}
+            service="Basic Information"
+            ver={true}
+          />
+          <Cards Icon={images.Goverment} service="Government ID " ver={true} />
+          <Cards Icon={images.Face} service="Government ID " ver={true} />
+          <Cards
+            Icon={images.Resident}
+            service="Residential Address"
+            ver={true}
+          />
+          <Cards
+            Icon={images.Certification}
+            service="Business Certificate"
+            ver={false}
+          />
+          <Cards
+            Icon={images.Certification}
+            service="Business Certificate"
+            ver={true}
+          />
+          <Cards
+            Icon={images.Certification}
+            service="Business Certificate"
+            ver={false}
+          />
+          <Cards
+            Icon={images.Certification}
+            service="Business Certificate"
+            ver={true}
+          />
+        </ScrollView>
+      </View>
+    </View>
   );
 }
 

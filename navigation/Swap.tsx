@@ -1,23 +1,14 @@
-import { images } from "@/assets/images";
 import { useNavigation } from "@react-navigation/native";
+import { images } from "../assets/images";
 
- import { useState } from "react";
-import {
-  Image,
-  Modal,
-  Pressable,
-  Text,
-  View,
-} from "react-native";
-
+import { useState } from "react";
+import { Image, Modal, Pressable, Text, View } from "react-native";
 
 export default function Index() {
   const [ShowAdv, setShowAdv] = useState(false);
   const navigation = useNavigation<any>();
 
-  return ( 
-
-    
+  return (
     //  full content
     <View className="flex-1 relative  justify-start items-center  bg-white  ">
       {/* IMG AND TEXT */}
@@ -85,18 +76,18 @@ export default function Index() {
           <SwapCards title="Swap Amount" total="0.00" />
         </View>
       </View>
-        <Modal
-          visible={ShowAdv}
-          animationType="fade"
-          transparent={true}
-          onRequestClose={() => setShowAdv(false)}
-          presentationStyle="formSheet"
-        >
-          <View className="w-full h-full flex justify-center items-center ">
-            <Advertisement show={ShowAdv} setShow={setShowAdv} />
-          </View>
-        </Modal> 
-    </View> 
+      <Modal
+        visible={ShowAdv}
+        animationType="fade"
+        transparent={true}
+        onRequestClose={() => setShowAdv(false)}
+        presentationStyle="formSheet"
+      >
+        <View className="w-full h-full flex justify-center items-center ">
+          <Advertisement show={ShowAdv} setShow={setShowAdv} />
+        </View>
+      </Modal>
+    </View>
   );
 }
 
@@ -134,8 +125,6 @@ const SwapCards = ({ title, total }: SwapProps) => {
   );
 };
 
-
-
 interface ADVProps {
   show: boolean;
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
@@ -170,4 +159,3 @@ const Advertisement = ({ show, setShow }: ADVProps) => {
     </View>
   );
 };
-

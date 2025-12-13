@@ -1,8 +1,8 @@
 // app/Login/login.tsx
-import { images } from "@/assets/images";
+import { useNavigation } from "@react-navigation/native";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
-import { useNavigation } from "@react-navigation/native";
+import { images } from "../assets/images";
 
 import {
   Image,
@@ -15,8 +15,8 @@ import {
 
 const Signin = () => {
   const [checked, setChecked] = useState(false);
- const navigation = useNavigation<any>(); 
- 
+  const navigation = useNavigation<any>();
+
   const router = useRouter();
   return (
     <View className="flex w-full h-full relative bg-[#f9fbfc7a] ">

@@ -1,8 +1,7 @@
 // app/Login/login.tsx
-import { images } from "@/assets/images"; 
 import { Picker } from "@react-native-picker/picker";
 import { useNavigation } from "@react-navigation/native";
- import React, { useState } from "react";
+import React, { useState } from "react";
 import {
   Image,
   Pressable,
@@ -11,12 +10,12 @@ import {
   TextInput,
   View,
 } from "react-native";
- 
+import { images } from "../assets/images";
 
 export default function Login() {
-   const [Countries, setCountries] = useState("Somali");
+  const [Countries, setCountries] = useState("Somali");
   const [checked, setChecked] = useState(false);
-   const navigation = useNavigation<any>();
+  const navigation = useNavigation<any>();
   return (
     <View className="flex w-full h-full relative bg-[#f9fbfc7a] ">
       {/* First section rounded view and taran logo */}
@@ -209,11 +208,13 @@ export default function Login() {
               </Text>
             </Pressable>
             {/* sign in */}
-            <Pressable   onPress={() => navigation.navigate("Signin")}
-            className="flex flex-row  gap-[4px] justify-center items-center ">
+            <Pressable
+              onPress={() => navigation.navigate("Signin")}
+              className="flex flex-row  gap-[4px] justify-center items-center "
+            >
               <Text className="font-[600] text-[13px] text-[#BAC2CC]  ">
-                Already have an account? 
-              </Text> 
+                Already have an account?
+              </Text>
               <Text className="font-[600] text-[15px] text-[#0C4C7B]  ">
                 Sign In
               </Text>

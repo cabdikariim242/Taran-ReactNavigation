@@ -1,5 +1,5 @@
-import AddButton from "./AddButton.png";
-import CallCenter from "./CallCenter.png";
+import AddButton from  "./AddButton.png";
+import CallCenter from "@assets/CallCenter.png";
 import EVC from "./EVC+.png";
 import EVCPULS from "./EVCPULS.png";
 import EVCtoFiat from "./EVCtoFiat.png";

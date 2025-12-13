@@ -1,6 +1,6 @@
-import { images } from "@/assets/images";
 import { Picker } from "@react-native-picker/picker";
 import React, { useState } from "react";
+import { images } from "../assets/images";
 // import { router } from "expo-router";
 import { Image, Modal, Pressable, ScrollView, Text, View } from "react-native";
 
@@ -129,7 +129,7 @@ const Advertisement = ({ show, setShow }: ADVProps) => {
     >
       <Image
         source={images.exclamation}
-        style={{ width:20, height: 70, marginHorizontal: "auto" }}
+        style={{ width: 20, height: 70, marginHorizontal: "auto" }}
       />
 
       <Text
@@ -142,10 +142,11 @@ const Advertisement = ({ show, setShow }: ADVProps) => {
         className="text-[#0C4C7B] text-[18px] text-center font-bold    mx-auto "
         style={{ width: 277, marginTop: 10 }}
       >
-        You don’t have  USDT TRC-20 in your Account list. Please create  one to get started 
+        You don’t have USDT TRC-20 in your Account list. Please create one to
+        get started
       </Text>
 
-    {/*  <Pressable
+      {/*  <Pressable
       onPress={() => router.push('../index2')}
         className="w-[276px] mx-auto h-[48px] bg-[#0C4C7B] rounded-[12px] flex justify-center items-center mt-5"
       >
