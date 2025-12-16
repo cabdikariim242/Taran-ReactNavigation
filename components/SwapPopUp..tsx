@@ -3,13 +3,15 @@ import React, { useState } from "react";
 import { images } from "../assets/images";
 // import { router } from "expo-router";
 import { Image, Modal, Pressable, ScrollView, Text, View } from "react-native";
-
+import CustomHeader  from "./CustomHeader";
 export default function Index2() {
   const [selectedValue, setSelectedValue] = useState("apple");
   const [ShowAdv, setShowAdv] = useState(false);
 
   return (
-    <View className="w-full h-full max-h-[650px]  ">
+ 
+    <View className="w-full h-full max-h-[850px]  ">
+         <CustomHeader/>
       {/* ScrollView with fixed height */}
       <ScrollView
         showsVerticalScrollIndicator={true}
@@ -17,11 +19,7 @@ export default function Index2() {
           paddingBottom: 40,
         }}
       >
-        {/* Header */}
-        <View className="flex-row justify-start border-b border-[#0C4C7B1A] h-[54px] px-7 gap-3 py-2 items-center w-full mx-auto">
-          <Image source={images.back} className="w-[16px] h-[16px]" />
-          <Text className="text-[#0C4C7B96] text-[18px] font-[500]">Back</Text>
-        </View>
+      
 
         {/* Amount section */}
         <View className="bg-[#22c55e13] w-[356px] border border-[#22c55e2c] h-[117px] flex justify-center items-center mx-auto mt-5 rounded-[24px]">

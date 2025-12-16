@@ -6,7 +6,7 @@ import { Image, ImageBackground, Text, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { images } from "./assets/images";
 import CustomHeader from "./components/CustomHeader"; // 👈 NEW
-import SwapPopUp from "./components/SwapPopUp";
+import SwapPopUp from "./components/SwapPopUp.";
 import "./globals.css";
 import LandingPage from "./landingPage/LandingPage";
 import Login from "./Login/login";
